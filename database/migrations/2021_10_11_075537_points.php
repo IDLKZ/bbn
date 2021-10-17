@@ -16,11 +16,12 @@ class Points extends Migration
         Schema::create('points', function (Blueprint $table) {
             $table->id();
             $table->foreignId("user_id")->references("id")->on("users")->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('bookmarks');
-            $table->string('graffiti');
-            $table->string('smoking_products');
+            $table->string('bookmarks')->nullable();
+            $table->string('graffiti')->nullable();
+            $table->string('smoking_products')->nullable();
             $table->string('address')->nullable();
             $table->string('video')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

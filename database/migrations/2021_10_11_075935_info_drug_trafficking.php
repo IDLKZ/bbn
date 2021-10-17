@@ -22,6 +22,7 @@ class InfoDrugTrafficking extends Migration
             $table->string('address');
             $table->text('text')->nullable();
             $table->string('image')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

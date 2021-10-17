@@ -1,23 +1,3 @@
-<div class="section-6 py-4">
-    <div class="container">
-        <h2>НАШИ ПАРТНЕРЫ</h2>
-        <div class="slider partners py-3">
-            <div>
-                <div class="slides"></div>
-                <p>Название компании</p>
-            </div>
-            <div>
-                <div class="slides"></div>
-                <p>Название компании</p>
-            </div>
-            <div>
-                <div class="slides"></div>
-                <p>Название компании</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <footer class="py-4">
     <div class="container">
         <div class="row">

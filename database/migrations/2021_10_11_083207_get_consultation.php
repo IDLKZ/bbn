@@ -13,10 +13,11 @@ class GetConsultation extends Migration
      */
     public function up()
     {
-        Schema::create('get_consultaion', function (Blueprint $table) {
+        Schema::create('get_consultation', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('phone');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class GetConsultation extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('get_consultaion');
+        Schema::dropIfExists('get_consultation');
     }
 }

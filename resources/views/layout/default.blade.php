@@ -16,12 +16,25 @@
     <link rel="stylesheet" href="{{asset('css/media.css')}}">
     <script src="https://kit.fontawesome.com/bd7a23af56.js" crossorigin="anonymous"></script>
     <title>Будущее без наркотиков</title>
-    @push('css')
+    @livewireStyles
+    <style>
+        .modal-content {
+            background: linear-gradient(237.58deg, #808080 -21.8%, #C4C4C4 97.42%);
+            border-radius: 5px;
+        }
+    </style>
+    @stack('css')
 </head>
 <body>
 
+@auth()
+    @include('layout.cabinet.header')
+@endauth
 
-@include('layout.header')
+@guest()
+    @include('layout.header')
+@endguest
+
 @yield('content')
 @include('layout.footer')
 
@@ -29,6 +42,7 @@
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/slick.min.js')}}"></script>
 <script src="{{asset('js/leaflet.js')}}"></script>
+@livewireScripts
 <script>
     $(document).ready(function(){
         $('.partners').slick({
@@ -54,7 +68,11 @@
         });
     });
     var map = L.map('map').setView([48.005284, 66.9045434], 5);
-    googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    // googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    //     maxZoom: 20,
+    //     subdomains:['mt0','mt1','mt2','mt3']
+    // }).addTo(map);
+    googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
         maxZoom: 20,
         subdomains:['mt0','mt1','mt2','mt3']
     }).addTo(map);
@@ -62,6 +80,6 @@
 
 
 
-@push('js')
+@stack('js')
 </body>
 </html>
