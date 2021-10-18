@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mb-md-0 mb-lg-0 mb-2">
-                <a href="#">EB.KZ</a>
+                <a href="#">esirtkisiz.kz</a>
                 <span class="mx-3 text-white">All rights reserved.</span>
             </div>
             <div class="col-md-3 mb-md-0 mb-lg-0 mb-2">

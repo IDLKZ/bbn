@@ -105,113 +105,153 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="stat1">
-                    <div class="row w-100">
-                        <div class="col-6 d-flex justify-content-around align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
+                @if(count($data)>0)
+                    @foreach($data as $login => $user)
+                        <div class="stat1">
+                            <div class="row w-100">
+                                <div class="col-6 d-flex justify-content-around align-items-center">
+                                    <img src="{{asset('images/top-1.png')}}" alt="">
+                                    <span>{{$login}}</span>
+                                </div>
+                                <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                    <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                    <span>{{$user['graffiti']}}</span>
+                                    <img src="{{asset('images/cirlce.png')}}" alt="">
+                                    <span>{{$user['bookmarks']}}</span>
+                                    <img src="{{asset('images/smoke.png')}}" alt="">
+                                    <span>{{$user['smokes']}}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
+                    @endforeach
+                @else
+                    <div class="stat1">
+                            <div class="row w-100">
+                                <div class="col-6 d-flex justify-content-around align-items-center">
+                                    <img src="{{asset('images/top-1.png')}}" alt="">
+                                    <span>Azamatti Azamat</span>
+                                </div>
+                                <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                    <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                    <span>070</span>
+                                    <img src="{{asset('images/cirlce.png')}}" alt="">
+                                    <span>040</span>
+                                    <img src="{{asset('images/smoke.png')}}" alt="">
+                                    <span>080</span>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="stat1">
+                        <div class="row w-100">
+                            <div class="col-6 d-flex justify-content-around align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="stat1">
-                    <div class="row w-100">
-                        <div class="col-6 d-flex justify-content-around align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
-                        </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="stat1">
-                    <div class="row w-100">
-                        <div class="col-6 d-flex justify-content-around align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
-                        </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
+                    <div class="stat1">
+                        <div class="row w-100">
+                            <div class="col-6 d-flex justify-content-around align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
             <div class="col-md-6">
                 <div class="stat2">
-                    <div class="d-flex w-100">
-                        <div class="col-6 d-flex justify-content-start align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
+                    @if(count($data2)>0)
+                        @foreach($data2 as $login => $user)
+                            <div class="d-flex w-100">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <img src="{{asset('images/top-1.png')}}" alt="">
+                                    <span>{{$login}}</span>
+                                </div>
+                                <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                    <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                    <span>{{$user['graffiti']}}</span>
+                                    <img src="{{asset('images/cirlce.png')}}" alt="">
+                                    <span>{{$user['bookmarks']}}</span>
+                                    <img src="{{asset('images/smoke.png')}}" alt="">
+                                    <span>{{$user['smokes']}}</span>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                        <div class="d-flex w-100">
+                            <div class="col-6 d-flex justify-content-start align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
+                        <div class="d-flex w-100">
+                            <div class="col-6 d-flex justify-content-start align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex w-100">
-                        <div class="col-6 d-flex justify-content-start align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
+                        <div class="d-flex w-100">
+                            <div class="col-6 d-flex justify-content-start align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
+                        <div class="d-flex w-100">
+                            <div class="col-6 d-flex justify-content-start align-items-center">
+                                <img src="{{asset('images/top-1.png')}}" alt="">
+                                <span>Azamatti Azamat</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
+                                <img src="{{asset('images/Graffiti.png')}}" alt="">
+                                <span>070</span>
+                                <img src="{{asset('images/cirlce.png')}}" alt="">
+                                <span>040</span>
+                                <img src="{{asset('images/smoke.png')}}" alt="">
+                                <span>080</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex w-100">
-                        <div class="col-6 d-flex justify-content-start align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
-                        </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
-                        </div>
-                    </div>
-                    <div class="d-flex w-100">
-                        <div class="col-6 d-flex justify-content-start align-items-center">
-                            <img src="{{asset('images/top-1.png')}}" alt="">
-                            <span>Azamatti Azamat</span>
-                        </div>
-                        <div class="col-6 d-flex justify-content-between align-items-center mobile-img">
-                            <img src="{{asset('images/Graffiti.png')}}" alt="">
-                            <span>070</span>
-                            <img src="{{asset('images/cirlce.png')}}" alt="">
-                            <span>040</span>
-                            <img src="{{asset('images/smoke.png')}}" alt="">
-                            <span>080</span>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -240,6 +280,27 @@
         <h2>НОВОСТИ</h2>
 
         <div class="row py-3">
+            @if(count($news)>0)
+                @foreach($news as $new)
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="{{$new->getFile('image')}}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$new->title}}</h5>
+                                <p class="card-text text-truncate">
+                                    {!! $new->description !!}
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <div>{{$new->created_at->diffForHumans()}}</div>
+                                    <div>
+                                        <a href="#">Читать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <img src="{{asset('images/new-1.png')}}" class="card-img-top" alt="">
@@ -330,6 +391,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 
@@ -339,6 +401,14 @@
     <div class="container">
         <h2>НАШИ ПАРТНЕРЫ</h2>
         <div class="slider partners py-3">
+            @if(count($partners)>0)
+                @foreach($partners as $partner)
+                    <div>
+                        <img src="{{$partner->getFile('logo')}}">
+                        <p>{{$partner->title}}</p>
+                    </div>
+                @endforeach
+            @else
             <div>
                 <div class="slides"></div>
                 <p>Название компании</p>
@@ -351,6 +421,7 @@
                 <div class="slides"></div>
                 <p>Название компании</p>
             </div>
+            @endif
         </div>
     </div>
 </div>

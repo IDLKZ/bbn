@@ -1,7 +1,7 @@
 @media screen and (max-width: 450px){
     .logo-class {display: none}
     .search img {width: 14px;height: 14px;}
-    #map{height: 250px}
+    #map{height: 350px}
     .w-80 {width: 60%;}
     .w-20 {width: 40%;}
     .msg{margin-bottom: 15px}
