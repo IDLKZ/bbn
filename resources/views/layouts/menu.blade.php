@@ -54,3 +54,27 @@
 
     </ul>
 </li>
+<li class="nav-item">
+    <a href="{{ route('galleries.index') }}"
+       class="nav-link {{ Request::is('galleries*') ? 'active' : '' }}">
+        <p>Галлерея</p>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{{ route('abouts.index') }}"
+       class="nav-link {{ Request::is('abouts*') ? 'active' : '' }}">
+        <p>О Фонде</p>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{{ route('userLists.index') }}"
+       class="nav-link {{ Request::is('userLists*') ? 'active' : '' }}">
+        <p>Пользователи</p>
+    </a>
+</li>
+
+

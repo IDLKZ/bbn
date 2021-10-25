@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Gallery;
 use App\Models\News;
 use App\Models\Partners;
 use App\Models\Points;
@@ -65,5 +67,13 @@ class MainController extends Controller
     {
         $new = News::firstWhere('alias', $alias);
         return view('single-new', compact('new'));
+    }
+
+    public function about()
+    {
+        $galleries = Gallery::all()->toArray();
+        $first = array_shift($galleries);
+        $text = About::latest()->first();
+        return view('about', compact('galleries', 'first', 'text'));
     }
 }

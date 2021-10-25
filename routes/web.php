@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CabinetController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GetConsultationController;
 use App\Http\Controllers\HelpFundsController;
 use App\Http\Controllers\HomeController;
@@ -10,6 +12,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\PointsController;
+use App\Http\Controllers\UserListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +30,7 @@ Route::get('/', [MainController::class, 'index'])->name('index');
 
 Route::get('/register', [AuthController::class, 'register'])->name('register')->middleware('guest');
 Route::get('/new/{alias}', [MainController::class, 'singleNew'])->name('singleNew');
-
+Route::get('/about-fund', [MainController::class, 'about'])->name('aboutFund');
 
 
 Route::group(['middleware' => ['auth', 'auth_check']], function () {
@@ -44,6 +47,9 @@ Route::group(['middleware' => ['auth', 'auth_check']], function () {
         Route::get('change-consultation/{id}', [GetConsultationController::class, 'changeConsultation'])->name('change-consultation');
         Route::resource('helpFunds', HelpFundsController::class)->only(['index', 'destroy']);
         Route::get('change-funds/{id}', [HelpFundsController::class, 'changeFunds'])->name('change-funds');
+        Route::resource('galleries', GalleryController::class)->only(['create', 'store', 'index', 'destroy']);
+        Route::resource('abouts', AboutController::class)->only(['index', 'edit', 'update']);
+        Route::resource('userLists', UserListController::class);
     });
 
     Route::get('cabinet', [MainController::class, 'index'])->name('cabinet');
@@ -56,5 +62,4 @@ Route::group(['middleware' => ['auth', 'auth_check']], function () {
 
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
-
 

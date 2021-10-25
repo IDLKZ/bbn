@@ -89,7 +89,7 @@
                 <img src="{{asset('images/partnership.png')}}" alt="">
                 Помочь Фонду
             </div>
-            <a href="#" class="text-black">
+            <a href="{{route('aboutFund')}}" class="text-black">
             <div class="msg">
                 <img src="{{asset('images/fond.png')}}" alt="">
                 О фонде
