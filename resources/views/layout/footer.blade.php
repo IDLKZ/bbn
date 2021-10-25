@@ -39,7 +39,7 @@
                     <a data-bs-toggle="modal" data-bs-target="#get-consultation" class="text-white">Получить консультацию</a>
                 </div>
                 <div class="footer-div">
-                    <a data-bs-toggle="modal" data-bs-target="#help-fund" class="text-white">Помочь Фонду</a>
+                    <a href="{{route('aboutFund')}}" class="text-white">Помочь Фонду</a>
                 </div>
             </div>
             <div class="col-md-3">
