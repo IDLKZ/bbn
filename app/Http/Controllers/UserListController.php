@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateUserListRequest;
 use App\Http\Requests\UpdateUserListRequest;
+use App\Models\UserList;
 use App\Repositories\UserListRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class UserListController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $userLists = $this->userListRepository->all();
+        $userLists = UserList::where('role_id', 0)->paginate(20);
 
         return view('user_lists.index')
             ->with('userLists', $userLists);
