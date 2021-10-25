@@ -34,19 +34,21 @@ class MainController extends Controller
             }
         }
         foreach ($users as $user) {
-            $data[$user->login]['bookmarks'] = 0;
-            $data[$user->login]['graffiti'] = 0;
-            $data[$user->login]['smokes'] = 0;
-            foreach ($user->points as $item) {
-                if ($item->status){
-                    if ($item->bookmarks){
-                        $data[$user->login]['bookmarks']++;
-                    }
-                    if ($item->graffiti){
-                        $data[$user->login]['graffiti']++;
-                    }
-                    if ($item->smoking_products){
-                        $data[$user->login]['smokes']++;
+            if ($user->points->count()>0){
+                $data[$user->login]['bookmarks'] = 0;
+                $data[$user->login]['graffiti'] = 0;
+                $data[$user->login]['smokes'] = 0;
+                foreach ($user->points as $item) {
+                    if ($item->status){
+                        if ($item->bookmarks){
+                            $data[$user->login]['bookmarks']++;
+                        }
+                        if ($item->graffiti){
+                            $data[$user->login]['graffiti']++;
+                        }
+                        if ($item->smoking_products){
+                            $data[$user->login]['smokes']++;
+                        }
                     }
                 }
             }
@@ -59,11 +61,9 @@ class MainController extends Controller
         return view('index', compact('bookmarks', 'graffiti', 'smokes', 'data', 'data2', 'news', 'partners'));
     }
 
-    public function cmp($a, $b)
+    public function singleNew($alias)
     {
-        if ($a["bookmarks"] == $b["bookmarks"]) {
-            return 0;
-        }
-        return ($a["bookmarks"] < $b["bookmarks"]) ? -1 : 1;
+        $new = News::firstWhere('alias', $alias);
+        return view('single-new', compact('new'));
     }
 }

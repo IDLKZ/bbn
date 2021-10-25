@@ -3,21 +3,29 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-div">
-                    <a href="">О Нас</a>
+                    <a href="{{route('index')}}#anchor-about">О Нас</a>
                 </div>
                 <div class="footer-div">
-                    <a href="">Новости</a>
+                    <a href="{{route('index')}}#anchor-news">Новости</a>
                 </div>
                 <div class="footer-div">
-                    <a href="">Наши партнеры</a>
+                    <a href="{{route('index')}}#anchor-partners">Наши партнеры</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="footer-div">
-                    <a href="">Присоединиться к борьбе</a>
+                    @guest()
+                        <a class="text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Присоединиться к борьбе</a>
+                    @else
+                        <a href="javascript:void(0)">Присоединиться к борьбе</a>
+                    @endguest
                 </div>
                 <div class="footer-div">
-                    <a href="">Войти в кабинет</a>
+                    @guest()
+                        <a class="text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти в кабинет</a>
+                    @else
+                        <a href="javascript:void (0)">Войти в кабинет</a>
+                    @endguest
                 </div>
                 <div class="footer-div">
                     <a href="">Карта</a>
@@ -25,13 +33,13 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-div">
-                    <a href="">Сообщить о наркоторговле</a>
+                    <a data-bs-toggle="modal" data-bs-target="#drug-trafficking" class="text-white">Сообщить о наркоторговле</a>
                 </div>
                 <div class="footer-div">
-                    <a href="">Получить консультацию</a>
+                    <a data-bs-toggle="modal" data-bs-target="#get-consultation" class="text-white">Получить консультацию</a>
                 </div>
                 <div class="footer-div">
-                    <a href="">Помочь Фонду</a>
+                    <a data-bs-toggle="modal" data-bs-target="#help-fund" class="text-white">Помочь Фонду</a>
                 </div>
             </div>
             <div class="col-md-3">

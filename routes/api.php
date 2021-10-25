@@ -14,6 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+
+Route::get('/books', function (){
+    $data = [
+      [
+          'id' => 1,
+          'title' => 'Title 1',
+          'img' => 'https://wallpaperaccess.com/full/1968763.jpg',
+          'description' => 'Hello World!'
+      ],
+        [
+            'id' => 2,
+            'title' => 'Title 2',
+            'img' => 'https://wallpapercave.com/wp/wp3640533.jpg',
+            'description' => 'Hello World 2!'
+        ]
+    ];
+
+    return response()->json($data);
 });

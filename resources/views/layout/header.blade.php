@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand d-flex" href="#">
+        <a class="navbar-brand d-flex" href="{{route('index')}}">
             <img src="{{asset('images/eb-logo.png')}}" alt="">
             <div class="ms-3 logo-class">
                 <div>Esirtkisiz Bolashaq</div>
@@ -13,13 +13,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-5">
-                    <a class="nav-link" aria-current="page" href="#">О Нас</a>
+                    <a class="nav-link" aria-current="page" href="{{route('index')}}#anchor-about">О Нас</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Новости</a>
+                    <a class="nav-link" href="{{route('index')}}#anchor-news">Новости</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="#">Наши партнеры</a>
+                    <a class="nav-link" href="{{route('index')}}#anchor-partners">Наши партнеры</a>
                 </li>
             </ul>
             <button class="btn btn-outline-login" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">

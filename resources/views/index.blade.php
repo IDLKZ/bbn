@@ -258,7 +258,7 @@
     </div>
 </div>
 
-<div class="section-4 py-4">
+<div class="section-4 py-4" id="anchor-about">
     <div class="container">
         <h1>О НАС</h1>
         <div class="row py-3">
@@ -275,7 +275,7 @@
     </div>
 </div>
 
-<div class="section-5 py-4">
+<div class="section-5 py-4" id="anchor-news">
     <div class="container">
         <h2>НОВОСТИ</h2>
 
@@ -293,7 +293,7 @@
                                 <div class="d-flex justify-content-between">
                                     <div>{{$new->created_at->diffForHumans()}}</div>
                                     <div>
-                                        <a href="#">Читать</a>
+                                        <a href="{{route('singleNew', $new->alias)}}">Читать</a>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@
 
 </div>
 
-<div class="section-6 py-4">
+<div class="section-6 py-4" id="anchor-partners">
     <div class="container">
         <h2>НАШИ ПАРТНЕРЫ</h2>
         <div class="slider partners py-3">

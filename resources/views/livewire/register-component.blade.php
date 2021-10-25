@@ -24,7 +24,7 @@
     </div>
     <div class="mt-2">
         <a href="{{route('register')}}">
-            <button type="submit" class="btn btn-success w-100">Зарегестрироваться</button>
+            <button type="submit" class="btn btn-success w-100">Зарегистрироваться</button>
         </a>
         <button type="button" class="btn w-100 mt-2" data-bs-dismiss="modal">Отмена</button>
     </div>

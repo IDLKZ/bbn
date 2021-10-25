@@ -15,7 +15,7 @@
         </div>
         <div class="mt-2">
             <a href="{{route('register')}}">
-                <button type="button" class="btn w-100 bg-white">Зарегестрироваться</button>
+                <button type="button" class="btn w-100 bg-white">Зарегистрироваться</button>
             </a>
         </div>
     </form>

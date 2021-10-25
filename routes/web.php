@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'index'])->name('index');
 
 Route::get('/register', [AuthController::class, 'register'])->name('register')->middleware('guest');
+Route::get('/new/{alias}', [MainController::class, 'singleNew'])->name('singleNew');
+
+
 
 Route::group(['middleware' => ['auth', 'auth_check']], function () {
 
