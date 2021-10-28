@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-md-3 mb-md-0 mb-lg-0 mb-2 mobile-footer-text">
-                <a href="mailto:info@bbn.kz">info@bbn.kz</a>
+                <a href="mailto:info@bbn.kz">info@esirtkisiz.kz</a>
             </div>
         </div>
     </div>
