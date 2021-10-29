@@ -409,7 +409,7 @@
                 @foreach($partners as $partner)
                     <div>
                         <div class="img-slide" style='background-image: url("{{$partner->getFile('logo')}}")'></div>
-                        <p>{{$partner->title}}</p>
+                        <p><a href="{{$partner->link}}">{{$partner->title}}</a></p>
                     </div>
                 @endforeach
             @else
