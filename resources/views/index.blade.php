@@ -408,7 +408,7 @@
             @if(count($partners)>0)
                 @foreach($partners as $partner)
                     <div>
-                        <img src="{{$partner->getFile('logo')}}">
+                        <div class="img-slide" style='background-image: url("{{$partner->getFile('logo')}}")'></div>
                         <p>{{$partner->title}}</p>
                     </div>
                 @endforeach
