@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand d-flex" href="{{route('index')}}">
-            <img src="{{asset('images/eb-logo.png')}}" alt="">
-            <div class="ms-3 logo-class">
-                <div>Esirtkisiz Bolashaq</div>
-                <div>Будущее без наркотиков</div>
-            </div>
+            <img src="{{asset('images/logo.png')}}" alt="Logo" width="69" height="64">
+{{--            <div class="ms-3 logo-class">--}}
+{{--                <div>Esirtkisiz Bolashaq</div>--}}
+{{--                <div>Будущее без наркотиков</div>--}}
+{{--            </div>--}}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

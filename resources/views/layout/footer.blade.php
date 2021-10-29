@@ -1,45 +1,15 @@
 <footer class="py-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="footer-div">
-                    <a href="{{route('index')}}#anchor-about">О Нас</a>
-                </div>
-                <div class="footer-div">
-                    <a href="{{route('index')}}#anchor-news">Новости</a>
-                </div>
-                <div class="footer-div">
-                    <a href="{{route('index')}}#anchor-partners">Наши партнеры</a>
-                </div>
+            <div class="col-md-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2096.2640223064273!2d71.40961171524664!3d51.130959345978404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245869c111faf4b%3A0x531154394c4efe87!2z0JzQtdC00LjQsNCb0LDQsQ!5e1!3m2!1sru!2skz!4v1635502532420!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <div class="footer-div">
-                    @guest()
-                        <a class="text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Присоединиться к борьбе</a>
-                    @else
-                        <a href="javascript:void(0)">Присоединиться к борьбе</a>
-                    @endguest
+                    <a href="mailto:esirtkisiz@gmail.com" class="text-white">Почта: Esirtkisiz@gmail.com</a>
                 </div>
                 <div class="footer-div">
-                    @guest()
-                        <a class="text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти в кабинет</a>
-                    @else
-                        <a href="javascript:void (0)">Войти в кабинет</a>
-                    @endguest
-                </div>
-                <div class="footer-div">
-                    <a href="">Карта</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-div">
-                    <a data-bs-toggle="modal" data-bs-target="#drug-trafficking" class="text-white">Сообщить о наркоторговле</a>
-                </div>
-                <div class="footer-div">
-                    <a data-bs-toggle="modal" data-bs-target="#get-consultation" class="text-white">Получить консультацию</a>
-                </div>
-                <div class="footer-div">
-                    <a href="{{route('aboutFund')}}" class="text-white">Помочь Фонду</a>
+                    <p class="text-white">Адрес: Қабанбай батыра 19</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -93,7 +63,7 @@
                 </div>
             </div>
             <div class="col-md-3 mb-md-0 mb-lg-0 mb-2 mobile-footer-text">
-                <a href="mailto:info@bbn.kz">info@esirtkisiz.kz</a>
+                <a href="mailto:esirtkisiz@gmail.com">esirtkisiz@gmail.com</a>
             </div>
         </div>
     </div>
