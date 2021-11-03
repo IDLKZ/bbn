@@ -262,7 +262,7 @@
     <div class="container">
         <h1>О НАС</h1>
         <div class="row py-3">
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
                 <img src="{{asset('images/logo.png')}}" alt="">
             </div>
             <div class="col-md-6">
