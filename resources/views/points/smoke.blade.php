@@ -5,11 +5,21 @@
 
     <style>
         #map {height: 400px}
+        #msg-alert{display: none}
     </style>
 @endpush
 @section('content')
     <hr>
     <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{route('setSmokes')}}" method="post" id="set-smoke" enctype="multipart/form-data">
             @csrf
             <div class="row">
@@ -22,6 +32,7 @@
                     <div class="mb-3">
                         <label class="form-label">Загрузите видео с места</label>
                         <input type="file" name="video" class="form-control" accept="video/*">
+                        <span id="msg-alert" class="alert alert-danger my-2">Подождите, идет загрузка видео на сервер...</span>
                     </div>
                     <div class="mb-3">
                         <button id="createMarker" class="btn btn-outline-success">Отправить отчет</button>
@@ -94,6 +105,7 @@
             if(coordinates.length){
                 $("#mapGeo").attr("value",JSON.stringify(coordinates));
             }
+            $('#msg-alert').css('display', 'block');
             $("#set-smoke").submit();
         });
     </script>

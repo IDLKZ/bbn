@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/media.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://kit.fontawesome.com/bd7a23af56.js" crossorigin="anonymous"></script>
     <title>Будущее без наркотиков</title>
     @livewireStyles
@@ -42,7 +43,9 @@
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/slick.min.js')}}"></script>
 <script src="{{asset('js/leaflet.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 @livewireScripts
+{!! Toastr::message() !!}
 <script>
     $(document).ready(function(){
         $('.partners').slick({
