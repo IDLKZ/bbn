@@ -19,16 +19,16 @@
                             Присоединяйтесь к нам в социальных сетях:
                         </span>
                         <div class="d-flex justify-content-around p-2">
-                            <a href="#">
+                            <a href="https://t.me/esirtkisiz">
                                 <img src="{{asset('images/telegram-white.png')}}" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://tiktok.com/@esirtkisiz">
                                 <img src="{{asset('images/tik-tok-white.png')}}" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://instagram.com/esirtkisiz">
                                 <img src="{{asset('images/instagram-white.png')}}" alt="">
                             </a>
-                            <a href="#">
+                            <a href="mailto:esirtkisiz@gmail.com">
                                 <img src="{{asset('images/mail-white.png')}}" alt="">
                             </a>
                         </div>
@@ -48,16 +48,16 @@
             </div>
             <div class="col-md-3 mb-md-0 mb-lg-0 mb-2">
                 <div class="d-flex">
-                    <a href="#" class="me-3">
+                    <a href="https://t.me/esirtkisiz" class="me-3 text-white">
                         <img src="{{asset('images/telegram-white.png')}}" alt="">
                     </a>
-                    <a href="#" class="me-3">
+                    <a href="https://tiktok.com/@esirtkisiz" class="me-3 text-white">
                         <img src="{{asset('images/tik-tok-white.png')}}" alt="">
                     </a>
-                    <a href="#" class="me-3">
+                    <a href="https://instagram.com/esirtkisiz" class="me-3 text-white">
                         <img src="{{asset('images/instagram-white.png')}}" alt="">
                     </a>
-                    <a href="#">
+                    <a href="mailto:esirtkisiz@gmail.com">
                         <img src="{{asset('images/mail-white.png')}}" alt="">
                     </a>
                 </div>

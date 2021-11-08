@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Points;
+use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CabinetController extends Controller
 {
@@ -77,5 +79,16 @@ class CabinetController extends Controller
         Toastr::success('Ваша заявка успешно отправлена на модерацию', 'Good!', ["positionClass" => "toast-top-right"]);
 
         return redirect(route('index'));
+    }
+
+    public function changeImage(Request $request)
+    {
+        $this->validate($request, [
+            'image' => 'required'
+        ]);
+        $user = User::find(Auth::id());
+        $user->uploadFile($request['image'], 'image');
+        Toastr::info('Успешно обновлена', 'Good!', ["positionClass" => "toast-top-center"]);
+        return redirect()->back();
     }
 }

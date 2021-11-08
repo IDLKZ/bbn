@@ -30,33 +30,33 @@
     </div>
 </nav>
 
-<div class="search">
-    <div class="container">
-        <div class="d-flex w-100">
-            <div class="position-relative d-flex align-items-center w-80">
-                <div class="input-group">
-                    <input type="text" class="search-input"><span class="searchicon"></span>
-                    <button type="button">Поиск</button>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between w-20 ps-3">
-                <a href="#">
-                    <img src="{{asset('images/telegram.png')}}" alt="">
-                </a>
-                <a href="#">
-                    <img src="{{asset('images/tik-tok.png')}}" alt="">
-                </a>
-                <a href="#">
-                    <img src="{{asset('images/instagram.png')}}" alt="">
-                </a>
-                <a href="#">
-                    <img src="{{asset('images/mail.png')}}" alt="">
-                </a>
-            </div>
-        </div>
+{{--<div class="search">--}}
+{{--    <div class="container">--}}
+{{--        <div class="d-flex w-100">--}}
+{{--            <div class="position-relative d-flex align-items-center w-80">--}}
+{{--                <div class="input-group">--}}
+{{--                    <input type="text" class="search-input"><span class="searchicon"></span>--}}
+{{--                    <button type="button">Поиск</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="d-flex justify-content-between w-20 ps-3">--}}
+{{--                <a href="#">--}}
+{{--                    <img src="{{asset('images/telegram.png')}}" alt="">--}}
+{{--                </a>--}}
+{{--                <a href="#">--}}
+{{--                    <img src="{{asset('images/tik-tok.png')}}" alt="">--}}
+{{--                </a>--}}
+{{--                <a href="#">--}}
+{{--                    <img src="{{asset('images/instagram.png')}}" alt="">--}}
+{{--                </a>--}}
+{{--                <a href="#">--}}
+{{--                    <img src="{{asset('images/mail.png')}}" alt="">--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-    </div>
-</div>
+{{--    </div>--}}
+{{--</div>--}}
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

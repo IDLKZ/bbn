@@ -3,16 +3,16 @@
         <div class="row w-100">
             <div class="col-md-4 d-flex align-items-center">
                 <div class="d-flex logo-img">
-                    <a href="#">
+                    <a href="https://t.me/esirtkisiz">
                         <img src="{{asset('images/telegram.png')}}" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://tiktok.com/@esirtkisiz">
                         <img src="{{asset('images/tik-tok.png')}}" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://instagram.com/esirtkisiz">
                         <img src="{{asset('images/instagram.png')}}" alt="">
                     </a>
-                    <a href="#">
+                    <a href="mailto:esirtkisiz@gmail.com">
                         <img src="{{asset('images/mail.png')}}" alt="">
                     </a>
                 </div>
@@ -36,12 +36,14 @@
                     </a>
                     @else
                         <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{asset('images/no-image.png')}}" width="50" height="50">
+                            <img src="{{\Illuminate\Support\Facades\Auth::user()->getFile('image')}}" width="50" height="50">
                         </a>
                     @endif
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-start myDropdown" aria-labelledby="dropdownMenuLink">
                         <div class="d-flex p-2">
-                            <img src="{{asset('images/no-image.png')}}" width="50" height="50">
+                            <a data-bs-toggle="modal" data-bs-target="#changeImage">
+                                <img src="{{\Illuminate\Support\Facades\Auth::user()->getFile('image')}}" width="50" height="50">
+                            </a>
                             <div class="w-100 d-flex justify-content-center align-items-center">
                                 <strong>{{\Illuminate\Support\Facades\Auth::user()->login}}</strong>
                             </div>
@@ -90,19 +92,19 @@
     </div>
 </nav>
 
-<div class="search">
-    <div class="container">
-        <div class="d-flex w-100">
-            <div class="position-relative d-flex align-items-center w-100">
-                <div class="input-group">
-                    <input type="text" class="search-input"><span class="searchicon"></span>
-                    <button type="button">Поиск</button>
-                </div>
-            </div>
-        </div>
+{{--<div class="search">--}}
+{{--    <div class="container">--}}
+{{--        <div class="d-flex w-100">--}}
+{{--            <div class="position-relative d-flex align-items-center w-100">--}}
+{{--                <div class="input-group">--}}
+{{--                    <input type="text" class="search-input"><span class="searchicon"></span>--}}
+{{--                    <button type="button">Поиск</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-    </div>
-</div>
+{{--    </div>--}}
+{{--</div>--}}
 
 
 <!-- Modal -->
@@ -130,5 +132,27 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="changeImage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/change-image" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Изменить фотографию</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" name="image" accept="image/*" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

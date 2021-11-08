@@ -13,6 +13,7 @@ class RegisterComponent extends Component
     public $login;
     public $phone;
     public $password;
+    public $motivation;
 
     protected function rules() {
         return [
@@ -27,13 +28,15 @@ class RegisterComponent extends Component
                 'regex:/[0-9]/',      // must contain at least one digit
                 'regex:/[@$!%*#?&]/', // must contain a special character
             ],
+            'motivation' => 'required'
         ];
     }
 
     protected $validationAttributes = [
         'login' => 'логин',
         'phone' => 'номер телефона',
-        'password' => 'пароль'
+        'password' => 'пароль',
+        'motivation' => 'мотивация'
     ];
 
     public function updated($propertyName)
@@ -53,6 +56,7 @@ class RegisterComponent extends Component
             'login' => $this->login,
             'email' => $this->email,
             'phone' => $this->phone,
+            'motivation' => $this->motivation,
             'password' => bcrypt($this->password)
         ]);
 

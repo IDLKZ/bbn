@@ -70,7 +70,7 @@
             arrows: false
         });
     });
-    var map = L.map('map').setView([48.005284, 66.9045434], 5);
+    var map = L.map('map', {scrollWheelZoom: false}).setView([48.005284, 66.9045434], 5);
     // googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     //     maxZoom: 20,
     //     subdomains:['mt0','mt1','mt2','mt3']

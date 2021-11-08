@@ -288,11 +288,11 @@
                 @foreach($news as $new)
                     <div class="col-md-4 mb-3">
                         <div class="card">
-                            <img src="{{$new->getFile('image')}}" class="card-img-top" alt="">
+                            <div class="card-bg-img" style='background-image: url("{{$new->getFile('image')}}");background-repeat: no-repeat;background-position: center;background-size: cover'></div>
                             <div class="card-body">
-                                <h5 class="card-title">{{$new->title}}</h5>
+                                <h5 class="card-title">{!! \Illuminate\Support\Str::limit($new->title, 20) !!}</h5>
                                 <p class="card-text text-truncate">
-                                    {!! $new->description !!}
+                                    {!! \Illuminate\Support\Str::limit($new->description, 75) !!}
                                 </p>
                                 <div class="d-flex justify-content-between">
                                     <div>{{$new->created_at->diffForHumans()}}</div>

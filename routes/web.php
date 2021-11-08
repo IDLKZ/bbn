@@ -60,6 +60,8 @@ Route::group(['middleware' => ['auth', 'auth_check']], function () {
     Route::post('set-graffiti', [CabinetController::class, 'setGraffiti'])->name('setGraffiti');
     Route::post('set-smokes', [CabinetController::class, 'setSmokes'])->name('setSmokes');
 
+    Route::post('/change-image', [CabinetController::class, 'changeImage']);
+
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
 

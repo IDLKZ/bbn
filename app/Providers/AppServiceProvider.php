@@ -6,6 +6,7 @@ use App\Models\GetConsultation;
 use App\Models\HelpFunds;
 use App\Models\InfoDrug;
 use App\Models\Points;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 

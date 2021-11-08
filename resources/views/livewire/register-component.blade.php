@@ -22,6 +22,10 @@
         <input type="password" wire:model="password" class="form-control" id="exampleInputPassword1" placeholder="пароль">
         @error('password') <span class="text-danger">{{ $message }}</span> @enderror
     </div>
+    <div class="mb-3">
+        <textarea wire:model="motivation" rows="3" class="form-control" placeholder="мотивация"></textarea>
+        @error('motivation') <span class="text-danger">{{ $message }}</span> @enderror
+    </div>
     <div class="mt-2">
         <a href="{{route('register')}}">
             <button type="submit" class="btn btn-success w-100">Зарегистрироваться</button>
