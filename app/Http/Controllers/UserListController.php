@@ -119,7 +119,8 @@ class UserListController extends AppBaseController
             'email' => 'required|string|max:255',
             'phone' => 'nullable|string|max:255',
             'image' => 'nullable|image',
-            'password' => 'nullable|string|max:255'
+            'password' => 'nullable|string|max:255',
+            'motivation' => 'required'
         ]);
         $userList = $this->userListRepository->find($id);
         $input = $request->all();

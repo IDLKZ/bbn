@@ -27,4 +27,9 @@
     {!! Form::label('password', 'Password:') !!}
     {!! Form::password('password', ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
+<!-- Motivation Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('motivation', 'Мотивация:') !!}
+    {!! Form::textarea('motivation', null, ['class' => 'form-control']) !!}
+</div>
 
